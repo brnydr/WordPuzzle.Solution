@@ -5,21 +5,21 @@ namespace WordPuzzle.Test;
 
 
 [TestClass]
-public class GameStateTest
+public class GameTest
 
 {
   [TestMethod]
   public void GameConstructor_ShouldCreateInstanceOfGame_Void()
   {
-    GameState newGame = new GameState();
+    Game newGame = new Game();
 
-    Assert.AreEqual(typeof(GameState), newGame.GetType());
+    Assert.AreEqual(typeof(Game), newGame.GetType());
   }
 
   [TestMethod]
   public void OnNewInstance_WordsArrShouldEqual_Int()
   {
-    GameState newGame = new GameState();
+    Game newGame = new Game();
     int actual = newGame.AllPossibleWords.wordList.Count; //Words  -> wordsList {...}
     int expected = 2309;
 
@@ -29,9 +29,9 @@ public class GameStateTest
   [TestMethod]
   public void OnNewInstance_ShouldSetChallengeWord_Void()
   {
-    GameState newGame = new GameState();
+    Game newGame = new Game();
     string randomStr = "string";
     Assert.AreEqual(randomStr.GetType(), newGame.TheWord.GetType());
-   
   }
+  
 }

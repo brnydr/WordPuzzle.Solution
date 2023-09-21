@@ -1,6 +1,7 @@
 Users should be presented with a number of blank spaces corresponding to the number of letters in a word. Each round, users should guess a letter:
 
 Game - turns, (board -> spaces)
+
 Game
  Guess(char c) -> 
  {
