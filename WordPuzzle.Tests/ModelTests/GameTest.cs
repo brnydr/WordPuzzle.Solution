@@ -33,5 +33,18 @@ public class GameTest
     string randomStr = "string";
     Assert.AreEqual(randomStr.GetType(), newGame.TheWord.GetType());
   }
+
+  [TestMethod]
+  public void Guess_ShouldReturnCorrect_ForArbitraryInput()
+  {
+    Game newGame = new Game();
+    Guess testGuess = new Guess("aohid");
+
+    int[] expected = [11, 0, 11, 11, 11];
+
+    int[] actual = newGame.Guess(testGuess);
+
+    CollectionAssert.AreEqual(expected, actual);
+  }
   
 }
