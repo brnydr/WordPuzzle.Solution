@@ -43,7 +43,7 @@ namespace WordPuzzle.Models
             results[index] = 10;
           }
           this.charFrequency[c]--;
-        }git
+        }
         else
         {
           results[index] = 0;
